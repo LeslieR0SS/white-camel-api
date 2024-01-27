@@ -1,47 +1,45 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
-<div >
+<!-- LOGO DEL PROYECTO -->
+<div>
   <a href="https://github.com/LeslieR0SS/white-camel-api">
     <img src="/src/main/resources/static/white-camel-alberto-logo-sin-fondo.png" alt="Logo" width="100" height="100" align="right">
   </a>
 </div>
 
-<!-- TITLE AND PRESENTATION-->
+<!-- TÍTULO Y PRESENTACIÓN -->
 
 # WHITE CAMEL 
->***Presentation:***
->White Camel is an Edtech project that addresses the steep costs and declining motivation in traditional driving schools by offering an innovative, online, gamified learning platform. Users experience a daily adventure, tackling challenges and earning bonuses through tests. Taking inspiration from ultra marathons, White Camel introduces a competitive element—if the camel overtakes you, you're eliminated.
+>***Presentación:***
+>White Camel es un proyecto de Edtech que aborda los altos costos y la disminución de la motivación en las autoescuelas tradicionales al ofrecer una plataforma de aprendizaje innovadora, en línea y gamificada. Los usuarios experimentan una aventura diaria, enfrentando desafíos y ganando bonificaciones a través de pruebas. Inspirado en ultramaratones, White Camel introduce un elemento competitivo: si el camello te adelanta, quedas eliminado.
 
-
-
-<!---ADD THE RESPECTIVE LINKS TO THAT DOCUMENTATION-->
+<!---AGREGA LOS ENLACES RESPECTIVOS A ESA DOCUMENTACIÓN-->
 <!---
   <div align="center">
-    <a href="https://aste.usu.edu/directory/faculty/">Team Directory</a>
+    <a href="https://aste.usu.edu/directory/faculty/">Directorio del Equipo</a>
     ·
     <a href="https:/DSDD">Wiki</a>
     ·
-    <a href="https://www.treehugger.com/thmb/nA-uVVo5Be5LIg_8kNAZvaSKYUM=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__05__lady-bug-on-leaf-e3cd36cdc3024129b61926ddf6ef386e.jpg">Report Bug</a>
+    <a href="https://www.treehugger.com/thmb/nA-uVVo5Be5LIg_8kNAZvaSKYUM=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__05__lady-bug-on-leaf-e3cd36cdc3024129b61926ddf6ef386e.jpg">Informar un Error</a>
   </div>
 --!>
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- ÍNDICE -->
 <details>
-  <summary>Index</summary>
+  <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Primeros Pasos</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Requisitos Previos</a></li>
+        <li><a href="#installation">Instalación</a></li>
       </ul>
     </li>
-      <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#technical-description">Technical Description</a>
+      <li><a href="#roadmap">Hoja de Ruta</a></li>
+    <li><a href="#technical-description">Descripción Técnica</a>
       <ul>
-        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#architecture">Arquitectura</a></li>
       </ul>
 
   </ol>
@@ -49,48 +47,46 @@
 
 ---
 
-<!-- GETTING STARTED -->
+<!-- PRIMEROS PASOS -->
 
-## Getting Started
+## Primeros Pasos
 
-Welcome to the initial steps of your journey with our project! This section provides guidance on setting up the project locally. Follow these straightforward steps to get a local copy up and running.
+¡Bienvenido a los primeros pasos de tu viaje con nuestro proyecto! Esta sección proporciona orientación sobre cómo configurar el proyecto localmente. Sigue estos pasos sencillos para obtener una copia local y ejecutarla.
 
-### Prerequisites
+### Requisitos Previos
 
-- [ ] Install VSC 
-- [ ] Intall Spring Boot Extension Pack *- by VMware*
-- [ ] Install Java 17
+- [ ] Instalar VSC 
+- [ ] Instalar Spring Boot Extension Pack *- por VMware*
+- [ ] Instalar Java 17
 
 ---
 
-### Installation
+### Instalación
 
-_Below is an example of how you can instruct your audience on installing and setting up your app._
+_A continuación se muestra un ejemplo de cómo puedes instruir a tu audiencia sobre la instalación y configuración de tu aplicación._
 
+```sh
 1. Clone the repo
-   ```sh
    git clone git@github.com:LeslieR0SS/white-camel-api.git
-   ```
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
----
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Install VSC 
-- [ ] Intall Spring Boot Extension Pack *- by VMware*
-- [ ] Install Java 17
-  
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
 
-## Technical Description
+<!-- HOJA DE RUTA -->
+## Hoja de Ruta
 
-###  Architecture 
+- [ ] Instalar VSC 
+- [ ] Instalar Spring Boot Extension Pack *- por VMware*
+- [ ] Instalar Java 17
 
-We design our application utilizing the principles of **the Hexagonal Architecture**. This approach organizes the system into three distinct layers: the `domain layer` housing domain objects, the `application layer` handling business logic along with the definition of primary and secondary ports, and the `infrastructure layer` responsible for the framework's operations. In this architecture, primary adapters facilitate communication with the application layer, while secondary adapters handle access to databases and communication with external APIs.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
+## Descripción Técnica
+
+###  Arquitectura 
+
+Diseñamos nuestra aplicación utilizando los principios de **la Arquitectura Hexagonal**. Este enfoque organiza el sistema en tres capas distintas: la capa de `dominio` alberga objetos de dominio, la capa de `aplicación` maneja la lógica empresarial junto con la definición de puertos primarios y secundarios, y la capa de `infraestructura` es responsable de las operaciones del marco. En esta arquitectura, los adaptadores primarios facilitan la comunicación con la capa de aplicación, mientras que los adaptadores secundarios manejan el acceso a bases de datos y la comunicación con APIs externas.
