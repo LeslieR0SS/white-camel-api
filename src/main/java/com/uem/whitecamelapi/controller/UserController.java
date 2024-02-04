@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.uem.whitecamelapi.service.UserService;
 
@@ -32,6 +33,16 @@ public class UserController {
     public UserController(UserService service) {
         this.service = service;
     }
+
+    /* GET http://localhost:8080/api */
+    @GetMapping
+    public ResponseEntity<String> welcomeMessage() {
+        String welcomeMessage = "¡Bienvenido/a a la API de White Camel!";
+        return ResponseEntity.ok(welcomeMessage);
+    }
+
+
+
 
     /* GET http://localhost:8080/api/users */
     @GetMapping("/users")
@@ -66,22 +77,25 @@ public class UserController {
 
     /* GET http://localhost:8080/api/users */
     @GetMapping("/users/username/{username}")
-    public ResponseEntity<User> findByUsername(@PathVariable String username) {
+    public ResponseEntity<?> findByUsername(@PathVariable String username) {
         // Llamada al servicio para buscar un usuario por su nombre de usuario
         Optional<User> userOptional = this.service.findByUsername(username);
-
+    
         // Verificar si el usuario fue encontrado en base al Optional
         if (userOptional.isPresent()) {
-            // Si el usuario está , responder con un código 200 OK y el usuario encontrado
+            // Si el usuario está, responder con un código 200 OK y el usuario encontrado
             return ResponseEntity.ok(userOptional.get());
         } else {
-            // Si el usuario no está, responder con un código 404 Not Found
-            return ResponseEntity.notFound().build();
+            // Si el usuario no está, responder con un código 404 Not Found y un mensaje personalizado
+            String mensaje = "Usuario con nombre de usuario '" + username + "' no encontrado.";
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensaje);
         }
     }
+    
 
     /* GET http://localhost:8080/api/users */
-    @GetMapping("/users/{registrationDate}")
+    /*                                                        TO REFACTOR *****
+    @GetMapping("/users/dates/{registrationDate}")
     public ResponseEntity<User> findByRegistrationDate(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date registrationDate) {
         // Llamada al servicio para buscar un usuario por su fecha de registro. Ej ISO date /api/users/2022-03-01
         Optional<User> userOptional = this.service.findByRegistrationDate(registrationDate);
@@ -95,7 +109,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    */
     /* GET http://localhost:8080/api/users */
     @PostMapping("/users")
     public ResponseEntity<User> save(@RequestBody User user) {

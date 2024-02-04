@@ -79,10 +79,16 @@ public class User {
         return "User [id=" + id + ", username=" + username + ", password=" + password + ", registrationDate=" + registrationDate + "]";
     }
 
-    public void save(User user) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    public void save(User updatedUser) {
+        if (updatedUser.getUsername() != null) {
+            this.setUsername(updatedUser.getUsername());
+        }
+
+        if (updatedUser.getPassword() != null) {
+            this.setPassword(updatedUser.getPassword());
+        }
+
+        return;
     }
-    
 
 }
