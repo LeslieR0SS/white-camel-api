@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 
+    // Constructor para inyección de dependencias
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -29,7 +30,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findById(Long id) {
+    public Optional<User> findById(Long id) {
         Objects.requireNonNull(id); // para en caso que el id no sea válido, dar un error
         return userRepository.findById(id);
     }

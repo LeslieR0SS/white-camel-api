@@ -23,18 +23,20 @@ public class User {
     private String username;
 
     private String password;
-    private Date signUpDate;
+
+
+    private Date registrationDate;
 
     //constructor vacío 
     public User() {
     }
 
     // constructor con todos sus atributos
-    public User(Long id, String user, String password, Date signUpDate) {
+    public User(Long id, String username, String password, Date registrationDate) {
         this.id = id;
-        this.user = user;
+        this.username = username;
         this.password = password;
-        this.signUpDate = signUpDate;
+        this.registrationDate = registrationDate;
     }
 
 
@@ -47,12 +49,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -63,18 +65,23 @@ public class User {
         this.password = password;
     }
 
-    public Date getSignUpDate() {
-        return signUpDate;
+    public Date getRegistrationDate() {
+        return registrationDate;
     }
 
-    public void setSignUpDate(Date signUpDate) {
-        this.signUpDate = signUpDate;
+    public void setRegistrationDate(Date registrationDate) {
+        this.registrationDate = registrationDate;
     }
 
     // método toString para todos los atributos
     @Override
     public String toString() {
-        return "User [id=" + id + ", user=" + user + ", password=" + password + ", signUpDate=" + signUpDate + "]";
+        return "User [id=" + id + ", username=" + username + ", password=" + password + ", registrationDate=" + registrationDate + "]";
+    }
+
+    public void save(User user) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'save'");
     }
     
 
