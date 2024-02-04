@@ -159,7 +159,7 @@ public class UserController {
     @DeleteMapping("/users/{id}")
         public ResponseEntity<String> deleteById(@PathVariable("id") Long id) {
         service.deleteById(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Usuario eliminado correctamente");
+        return ResponseEntity.status(HttpStatus.OK).body("Usuario con el ID " + id + " eliminado correctamente");
         }
 
 }
