@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.uem.whitecamelapi.service.UserService;
 
@@ -161,5 +162,41 @@ public class UserController {
         service.deleteById(id);
         return ResponseEntity.status(HttpStatus.OK).body("Usuario con el ID " + id + " eliminado correctamente");
         }
+
+    // LOGIN verficador
+
+   /* POST http://localhost:8080/api/users/login */
+    @PostMapping("/users/login")
+    public ResponseEntity<String> login(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
+    if (username.isBlank()) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("El nombre de usuario es obligatorio. Por favor, completa el campo correspondiente.");
+    }
+
+    if (password.isBlank()) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("La contraseña es obligatoria. Por favor, completa el campo correspondiente.");
+    }
+
+    // Llamada al servicio para buscar un usuario por su nombre de usuario
+    Optional<User> userOptional = this.service.findByUsername(username);
+
+    // Verificar si el usuario fue encontrado en base al Optional
+    if (userOptional.isPresent()) {
+        // Si el usuario está presente, verificar la contraseña
+        User user = userOptional.get();
+        if (user.getPassword().equals(password)) {
+            // Contraseña correcta, puedes devolver un mensaje de éxito
+            String mensajeExito = "¡Bienvenido/a! Has iniciado sesión correctamente como '" + username + "'.";
+            return ResponseEntity.ok(mensajeExito);
+        } else {
+            // Contraseña incorrecta
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Contraseña incorrecta");
+        }
+    } else {
+        // Si el usuario no está presente, responder con un código 404 Not Found
+        String mensajeNoEncontrado = "Lo siento, no se encontró un usuario con el nombre '" + username + "'.";
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensajeNoEncontrado);
+    }
+}
+
 
 }
