@@ -89,4 +89,5 @@ _A continuación se muestra un ejemplo de cómo puedes instruir a tu audiencia s
 
 ###  Arquitectura 
 
-Diseñamos nuestra aplicación utilizando los principios de **la Arquitectura Hexagonal**. Este enfoque organiza el sistema en tres capas distintas: la capa de `dominio` alberga objetos de dominio, la capa de `aplicación` maneja la lógica empresarial junto con la definición de puertos primarios y secundarios, y la capa de `infraestructura` es responsable de las operaciones del marco. En esta arquitectura, los adaptadores primarios facilitan la comunicación con la capa de aplicación, mientras que los adaptadores secundarios manejan el acceso a bases de datos y la comunicación con APIs externas.
+Diseñamos nuestra aplicación siguiendo el patrón de **Arquitectura Repository**. Este enfoque organiza el sistema en cuatro capas claramente definidas. La capa de `Controladores` actúa como punto de entrada, gestionando las solicitudes HTTP y dirigiendo el flujo. La capa de `Servicios` contiene la lógica empresarial y se comunica con los controladores y la capa de `Repositorios`. La cual se encarga del acceso a los datos y la comunicación con la base de datos. Finalmente, la capa de `Modelo` representa las entidades del dominio, como la clase `User`, proporcionando un modelo de datos coherente y estructurado para la aplicación.
+ 
