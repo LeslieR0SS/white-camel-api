@@ -2,10 +2,14 @@ package com.uem.whitecamelapi.model;
 
 import java.util.Map;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.MapKeyColumn;
 import javax.persistence.Table;
 
 @Entity // con @Entity y @Table creamos una entidad que se va a almacenar en bbdd
@@ -19,7 +23,13 @@ public class Question {
     private Long id;
 
     private String statement;
+
+    @ElementCollection
+    @CollectionTable(name = "question_options", joinColumns = @JoinColumn(name = "question_id"))
+    @MapKeyColumn(name = "option_key")
     private Map<OptionEnum, String> options;
+    
+
     private OptionEnum correctAnswer;
     private DifficultyLevel difficultyLevel;
     private String topic;
@@ -70,6 +80,19 @@ public class Question {
         }
     }
 
+    public OptionEnum getCorrectAnswer() {
+        return correctAnswer;
+    }
+    
+    public void setCorrectAnswer(OptionEnum correctAnswer) {
+        if (correctAnswer != null) {
+            this.correctAnswer = correctAnswer;
+        } else {
+            // Manejo del caso de respuesta correcta nula
+            throw new IllegalArgumentException("La respuesta correcta no puede ser nula");
+        }
+    }
+
     public DifficultyLevel getDifficultyLevel() {
         return difficultyLevel;
     }
@@ -117,5 +140,6 @@ public class Question {
                 ", media=" + media
                 + "]";
     }
+
 
 }
