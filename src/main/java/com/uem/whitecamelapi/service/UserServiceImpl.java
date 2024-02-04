@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 
+
     // Constructor para inyección de dependencias
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
