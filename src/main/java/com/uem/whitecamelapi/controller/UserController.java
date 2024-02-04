@@ -46,24 +46,26 @@ public class UserController {
     }
 
     /* GET http://localhost:8080/api/users */
-    @GetMapping("/users/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id) {
+    @GetMapping("/users/id/{id}")
+    public ResponseEntity<?> findById(@PathVariable Long id) {
         // Llamada al servicio para buscar un usuario por su ID
-        Optional<User> user = this.service.findById(id);
+        Optional<User> userOptional = this.service.findById(id);
     
         // Verificar si el usuario fue encontrado
-        if (user.isPresent()) {
-            // Si el usuario está presente, responder con un código 200 OK y el usuario encontrado
-            return ResponseEntity.ok(user.get());
-        } else {
-            // Si el usuario no está, responder con un código 404 Not Found
-            return ResponseEntity.notFound().build();
+        if (userOptional.isEmpty()) {
+            String mensaje = "Usuario con ID " + id + " no encontrado.";
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensaje);
         }
+    
+        // Extraer el usuario del Optional
+        User user = userOptional.get();
+    
+        return ResponseEntity.ok(user);
     }
     
 
     /* GET http://localhost:8080/api/users */
-    @GetMapping("/users/{username}")
+    @GetMapping("/users/username/{username}")
     public ResponseEntity<User> findByUsername(@PathVariable String username) {
         // Llamada al servicio para buscar un usuario por su nombre de usuario
         Optional<User> userOptional = this.service.findByUsername(username);
