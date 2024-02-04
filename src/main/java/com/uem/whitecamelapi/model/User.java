@@ -2,6 +2,7 @@ package com.uem.whitecamelapi.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +19,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
+    @Column(unique = true) // para que los nombres no se repitan 
+    private String username;
 
-    private String user;
     private String password;
     private Date signUpDate;
 
