@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuario y Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Color azul oscuro */
+            color: #fff; /* Color de texto blanco */
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #33adff; /* Color azul claro */
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #33adff; /* Color azul claro */
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #33adff; /* Color azul claro */
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #333; /* Color de texto oscuro */
+        }
+
+        input[type="button"] {
+            background-color: #33adff; /* Color azul claro */
+            color: white;
+            cursor: pointer;
+        }
+
+        #respuestaDiv {
+            margin-top: 20px;
+            color: #fff; /* Color de texto blanco */
+        }
+
+        #logo {
+            width: 500px; /* Ajusta el tamaño del logo según sea necesario */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <img id="logo" src="C:\Users\alber\Desktop\Leslie\White_Camel_Logo.png" alt="Logo">
+
+    <h2>Formulario de Usuario y Contraseña</h2>
+ 
+    <form id="myForm">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+ 
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br>
+ 
+        <input type="button" value="Enviar" onclick="enviarDatos()">
+    </form>
+ 
+    <div id="respuestaDiv"></div>
+
+    <script>
+        function enviarDatos() {
+            var username = document.getElementById("usuario").value;
+            var password = document.getElementById("contrasena").value;
+            var respuestaDiv = document.getElementById("respuestaDiv");
+ 
+            var formData = new FormData();
+            formData.append('username', username);
+            formData.append('password', password);
+
+            // Utilizar la función fetch para enviar los datos a tu API
+            fetch('http://localhost:8080/api/users/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Mostrar mensaje al cliente
+                respuestaDiv.innerHTML = `<p>${data}</p>`;
+                // Si la respuesta es exitosa, redirigir a la página de menú
+               // if (data === "¡Bienvenido/a! Has iniciado sesión correctamente como 'Alberto'") {
+                  window.location.href = 'menu.html';
+               // }
+            })
+            .catch(error => {
+                // Mostrar mensaje de error al cliente
+                respuestaDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+            });
+        }
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Color azul oscuro */
+            color: #fff; /* Color de texto blanco */
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #33adff; /* Color azul claro */
+        }
+
+        /* Estilo para el botón de cerrar sesión */
+        #cerrarSesionButton {
+            background-color: #33adff; /* Color azul claro */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Nueva sección para el contenido de la página */
+        .content-section {
+            margin-top: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Asegura que la sección de contenido esté encima del botón */
+        }
+
+        /* Estilo para la imagen en la sección de contenido */
+        #menuImage {
+            width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+            margin-bottom: 20px; /* Ajusta la cantidad de espacio debajo de la imagen */
+            z-index: 2; /* Asegura que la imagen esté encima del botón */
+        }
+
+        /* Estilo para el logo arriba a la izquierda */
+        #logo {
+            width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Estilo para el botón debajo de la imagen en la sección de contenido */
+        #otraVentanaButton {
+            background-color: #33adff; /* Color azul claro */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo arriba a la izquierda -->
+    <img id="logo" src="C:\Users\alber\Desktop\Leslie\White_Camel_Logo.png" alt="Logo">
+
+    <h2>Menú Principal</h2>
+
+    <!-- Nueva sección de contenido -->
+    <div class="content-section">
+        <img id="menuImage" src="C:\Users\alber\Desktop\Leslie\Test.jpg" alt="Imagen del Menú">
+        
+        <!-- Botón debajo de la imagen en la sección de contenido -->
+        <button id="otraVentanaButton" onclick="irAOtraVentana()"> LETS RUN!</button>
+    </div>
+
+    <!-- Botón de cerrar sesión en la esquina inferior derecha -->
+    <button id="cerrarSesionButton" onclick="cerrarSesion()">Cerrar Sesión</button>
+
+    <script>
+        // Función para cerrar sesión
+        function cerrarSesion() {
+            // Redirigir a la página de inicio de sesión
+            window.location.href = 'Login.html';
+        }
+
+        // Función para ir a otra ventana
+        function irAOtraVentana() {
+            // Redirigir a la otra ventana (reemplaza 'otra_ventana.html' con la URL deseada)
+            window.location.href = 'otra_ventana.html';
+        }
+    </script>
+
+</body>
+</html>

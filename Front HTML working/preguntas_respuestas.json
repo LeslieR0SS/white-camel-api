@@ -1,0 +1,210 @@
+[
+    {
+        "id": 1,
+        "statement": "Cuando abandona una autopista, debería...",
+        "options": {
+            "C": "Circular por el carril de deceleración tan pronto como sea posible.",
+            "A": "Reducir la velocidad a 60 km/h.",
+            "B": "Continuar en su carril hasta la salida."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "MEDIUM",
+        "topic": "Normas de tráfico",
+        "media": "https://revista.dgt.es/Galerias/test/N-267/Test-267-P02-250x226.jpg"
+    },
+    {
+        "id": 2,
+        "statement": "Cuando las indicaciones de un semáforo y una señal de balizamiento se contradicen, prevalece...",
+        "options": {
+            "C": "La señal más restrictiva.",
+            "A": "La señal de balizamiento, por orden de prioridad.",
+            "B": "El semáforo."
+        },
+        "correctAnswer": "A",
+        "difficultyLevel": "HARD",
+        "topic": "Normas de tráfico",
+        "media": "https://revista.dgt.es/Galerias/test/N-267/Test-267-P01-250x226.jpg.jpg"
+    },
+    {
+        "id": 3,
+        "statement": "En una intersección sin señales o marcas, ¿quién tiene el derecho de paso?",
+        "options": {
+            "C": "El vehículo más rápido.",
+            "A": "El vehículo más grande.",
+            "B": "El vehículo que llega primero."
+        },
+        "correctAnswer": "B",
+        "difficultyLevel": "HARD",
+        "topic": "Normas de tráfico",
+        "media": "https://ejemplo-imagen3.jpg"
+    },
+    {
+        "id": 4,
+        "statement": "¿Qué indica una señal de tráfico con fondo azul?",
+        "options": {
+            "C": "Información.",
+            "A": "Obligación.",
+            "B": "Prohibición."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "HARD",
+        "topic": "Normas de tráfico",
+        "media": "https://ejemplo-imagen4.jpg"
+    },
+    {
+        "id": 5,
+        "statement": "¿Qué debe hacer si se ve obligado a detener su vehículo en el interior de un túnel por motivos de circulación?",
+        "options": {
+            "C": "Detenerse lo más cerca posible del vehículo de delante.",
+            "A": "Encender la señal de emergencia y las luces de carretera.",
+            "B": "Detenerse lo más lejos posible del vehículo de delante."
+        },
+        "correctAnswer": "B",
+        "difficultyLevel": "MEDIUM",
+        "topic": "Traffic Rules",
+        "media": ""
+    },
+    {
+        "id": 6,
+        "statement": "El consumo de drogas de abuso o ilegales, ¿puede alterar la percepción del riesgo?",
+        "options": {
+            "C": "No; el consumo de drogas no altera la percepción del riesgo.",
+            "A": "Sí, aumenta y el conductor percibe mejor las situaciones de riesgo.",
+            "B": "Sí, disminuye y el conductor percibe peor las situaciones de riesgo."
+        },
+        "correctAnswer": "B",
+        "difficultyLevel": "MEDIUM",
+        "topic": "Conducción bajo influencia de sustancias",
+        "media": ""
+    },
+    {
+        "id": 7,
+        "statement": "Para incorporarse a la circulación, ¿se puede dar marcha atrás?",
+        "options": {
+            "C": "Sí, pero solo en vías urbanas.",
+            "A": "Sí, es una de las maniobras en las que está permitido.",
+            "B": "No, en ningún caso."
+        },
+        "correctAnswer": "A",
+        "difficultyLevel": "MEDIUM",
+        "topic": "Normas de conducción",
+        "media": ""
+    },
+    {
+        "id": 8,
+        "statement": "Una vez iniciado el adelantamiento, se producen circunstancias que hacen difícil su finalización sin provocar riesgos; ¿qué está obligado a hacer el conductor?",
+        "options": {
+            "C": "Reducir la velocidad y regresar a su carril sin obstaculizar.",
+            "A": "Aumentar la velocidad para finalizar el adelantamiento.",
+            "B": "Advertir del riesgo al vehículo al que pretende adelantar para que detenga su marcha."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "EASY",
+        "topic": "Maniobras de adelantamiento",
+        "media": ""
+    },
+    {
+        "id": 9,
+        "statement": "En los lugares donde se impida la visibilidad de la señalización a los usuarios a quienes les afecta está prohibido...",
+        "options": {
+            "C": "Parar y estacionar.",
+            "A": "Parar, pero está permitido estacionar.",
+            "B": "Estacionar, pero está permitido parar."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "EASY",
+        "topic": "Señalización con visibilidad reducida",
+        "media": ""
+    },
+    {
+        "id": 10,
+        "statement": "Un conductor con sueño...",
+        "options": {
+            "C": "Tarda más tiempo en reaccionar.",
+            "A": "Tarda menos tiempo en reaccionar.",
+            "B": "Analiza situaciones de tráfico complejas en menos tiempo."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "EASY",
+        "topic": "Fatiga al volante",
+        "media": ""
+    },
+    {
+        "id": 11,
+        "statement": "Los sistemas de navegación, ¿pueden ayudarnos a controlar la velocidad de circulación?",
+        "options": {
+            "C": "Sí, aunque la principal fuente de información debe de ser siempre el velocímetro.",
+            "A": "Solo cuando se circula a velocidades superiores a 100 km/h.",
+            "B": "No, los sistemas de navegación no ayudan a controlar la velocidad."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "HARD",
+        "topic": "Sistemas de navegación y velocidad",
+        "media": ""
+    },
+    {
+        "id": 12,
+        "statement": "En un turismo, ¿cuántos chalecos reflectantes es obligatorio llevar?",
+        "options": {
+            "C": "Uno por cada plaza autorizada de que disponga el vehículo.",
+            "A": "Uno.",
+            "B": "Dos: uno para el conductor y otro para el acompañante."
+        },
+        "correctAnswer": "A",
+        "difficultyLevel": "HARD",
+        "topic": "Normativa de seguridad en vehículos",
+        "media": ""
+    },
+    {
+        "id": 13,
+        "statement": "Queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices. ¿Cuál es la forma más adecuada de actuar para seguir circulando?",
+        "options": {
+            "C": "Empujar el vehículo por uno de los laterales hacia una mejor superficie con adherencia.",
+            "A": "Pisar a fondo el pedal acelerador para conseguir mayor tracción en las ruedas y así lograr mayor adherencia.",
+            "B": "Preparar un terreno estable colocando el material adecuado cerca de las ruedas motrices para que estas tengan la adherencia suficiente."
+        },
+        "correctAnswer": "B",
+        "difficultyLevel": "HARD",
+        "topic": "Conducción en condiciones adversas",
+        "media": ""
+    },
+    {
+        "id": 14,
+        "statement": "Si el pasajero de una motocicleta no utiliza el casco de protección, la responsabilidad es del...",
+        "options": {
+            "C": "Titular del vehículo.",
+            "A": "Conductor.",
+            "B": "Pasajero."
+        },
+        "correctAnswer": "A",
+        "difficultyLevel": "EPIC",
+        "topic": "Seguridad en motocicletas",
+        "media": ""
+    },
+    {
+        "id": 15,
+        "statement": "¿Qué precaución puede adoptar para evitar el riesgo de atropello a ciclistas?",
+        "options": {
+            "C": "No hacer señales acústicas cerca de ellos.",
+            "A": "Iniciar un adelantamiento cuando se acerque un grupo de ciclistas en sentido contrario.",
+            "B": "Utilizar señales luminosas para avisar de su propósito de adelantarles."
+        },
+        "correctAnswer": "C",
+        "difficultyLevel": "EPIC",
+        "topic": "Seguridad al adelantar ciclistas",
+        "media": ""
+    },
+    {
+        "id": 16,
+        "statement": "El seguro de suscripción obligatoria, ¿cubre los daños causados al conductor no culpable de un accidente?",
+        "options": {
+            "C": "No, ni los daños personales ni los materiales.",
+            "A": "Sí, los daños personales, pero no los materiales.",
+            "B": "Sí, tanto los daños personales como los materiales."
+        },
+        "correctAnswer": "B",
+        "difficultyLevel": "EPIC",
+        "topic": "Seguro obligatorio y daños en accidentes",
+        "media": ""
+    }
+]
