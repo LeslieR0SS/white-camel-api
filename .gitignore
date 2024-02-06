@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### APP CONFIGURATION 
+.env
+
+
+##TESts
+src/main/java/com/uem/whitecamelapi/infraestructure/api/controller/AiController.java
