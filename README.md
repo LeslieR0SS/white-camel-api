@@ -62,7 +62,7 @@
 
 ### Instalación
 
-_A continuación se muestra un ejemplo de cómo puedes instruir a tu audiencia sobre la instalación y configuración de tu aplicación._
+_A continuación explicaremos los pasos a seguir para reliazar la instalación y configuración de tu nuestra aplicación._
 
 #### Paso 1: Clonar el Repositorio
 1. Abre tu terminal o línea de comandos.
